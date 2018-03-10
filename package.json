@@ -1,0 +1,22 @@
+{
+  "name": "lap-trinh-va-cuoc-song",
+  "version": "1.0.0",
+  "description": "Nơi chia sẻ link đến các bài viết của cuốn sách Lập trình và cuộc sống",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngminhtrung/lap-trinh-va-cuoc-song.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^1.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ngminhtrung/lap-trinh-va-cuoc-song/issues"
+  },
+  "homepage": "https://github.com/ngminhtrung/lap-trinh-va-cuoc-song#readme"
+}
