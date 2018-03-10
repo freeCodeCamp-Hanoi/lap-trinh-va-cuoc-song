@@ -1,6 +1,13 @@
 # SÁCH "LẬP TRÌNH VÀ CUỘC SỐNG"
 Nơi chia sẻ link đến các bài viết của cuốn sách Lập trình và cuộc sống
 
+Ghi chú: 
+- Quyển sách này là tập hợp lại một số các bài dịch sang tiếng Việt từ blog [Codding Horror](https://blog.codinghorror.com), đăng trên Vinacode từ năm 2015 đến hiện tại. 
+- Sách giấy có thể đặt mua tại [đây](https://tiki.vn/lap-trinh-va-cuoc-song-p826233.html)
+- Tác giả của Codding Horror là [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood), một kỹ sư phần mềm, tác giả blog và một doanh nhân, là đồng sáng lập của [StackOverflow](https://stackoverflow.com/). 
+- Số lượng các bài viết đặt ở mục lục bên dưới nhiều hơn số bài thực sự được trích đăng trong sách "Lập trình và cuộc sống"
+- Phần code *puppeteer* để lấy tiêu đề và link bài viết từ Vinacode được đặt trong folder [`src`](/src).
+
 ## Giới thiệu
 
 Jeff Atwood bắt đầu viết blog Coding Horror vào năm 2004, và tin rằng nó đã làm thay đổi cuộc đời của mình. Anh cần một cách để theo dõi sự phát triển của phần mềm theo thời gian-bất cứ điều gì anh ta nghĩ đến hoặc làm việc trên nó. Jeff đã nghiên cứu các chủ đề mà anh cảm thấy thú vị, sau đó ghi lại nghiên cứu của mình bằng một bài đăng trên blog mà anh có thể dễ dàng tìm lại và tham khải sau này. Theo thời gian, ngày càng có nhiều độc giả truy cập blog tìm thấy các bài viết hữu ích, liên quanvaf thú vị. Hiện nay, có khoảng 100.000 độc giả truy cập blog mỗi ngày cũng rất nhiều bình luận và tương tác trên web đó.
@@ -9,21 +16,129 @@ Nội dung blog không tập trung quá nhiều vào mặt kỹ thuật mà thi�
 
 ## Mục lục
 
-### Phần 1 - LẬP TRÌNH
-
-1. 8 cấp độ nghề lập trình viên
-2. Tại sao nhiều lập trình viên lại không biết ... code
-3. Làm thế nào để trở thành một lập trình viên giỏi hơn bằng cách không lập trình
-4. Chênh lệch kỹ năng trong lập trình
-5. Lập trình không có comment
-6. Đây là điều xảy ra khi bạn để cho các lập trình viên tạo giao diện người dùng
-7. Khi bạn đọc hiểu code, chính là lúc bạn đang rewriting code
-8. Lập trình viên giỏi cần có "năng khiếu toán học"?
-9. Lập trình viên giỏi hãy bớt sử dụng chuột
-10. Phương pháp lập trình tốt nhất hiện nay
-11. Lập trình viên nên thuộc lòng triết lý KISS và YAGNI
-12. Những nguyên tắc thiết kế cơ bản dành cho lập trình viên
-13. Tất cả các ngôn ngữ lập trình đều như nhau?
-
-
-### Phần 2 - CUỘC SỐNG
+- [Lập trình viên và đầu bếp](https://vinacode.net/2016/06/21/lap-trinh-vien-va-dau-bep/)
+- [Phương pháp lập trình tốt nhất hiện nay](https://vinacode.net/2016/06/13/phuong-phap-lap-trinh-tot-nhat/)
+- [Học nghề lập trình phần mềm](https://vinacode.net/2016/06/09/hoc-nghe-lap-trinh-phan-mem/)
+- [Lập trình viên Ferengi](https://vinacode.net/2016/06/05/lap-trinh-vien-ferengi/)
+- [Liệu tồi hơn có thực sự tốt hơn?](https://vinacode.net/2016/04/28/lap-trinh-phan-mem/)
+- [Lập trình viên và hội chứng tự kỷ](https://vinacode.net/2016/04/23/lap-trinh-vien-va-hoi-chung-tu-ky/)
+- [Phần cứng rất rẻ, lập trình viên rất đắt](https://vinacode.net/2016/02/28/lap-trinh-vien-gioi-va-muc-luong/)
+- [Phát minh vĩ đại nhất trong ngành khoa học máy tính](https://vinacode.net/2016/02/14/kien-thuc-quan-trong-nhat-trong-lap-trinh/)
+- [Vì bạn muốn trở thành một nhà phát triển game](https://vinacode.net/2016/01/21/tro-thanh-lap-trinh-vien-game/)
+- [Phát triển phần mềm: Đó là một tôn giáo](https://vinacode.net/2016/01/17/phat-trien-phan-mem-la-mot-ton-giao/)
+- [Lập trình viên giỏi cần có “năng khiếu toán học”?](https://vinacode.net/2016/01/06/lap-trinh-vien-co-can-gioi-toan/)
+- [Có một thứ mà các lập trình viên và nhạc sĩ có cùng điểm chung](https://vinacode.net/2015/12/24/lap-trinh-vien-la-gi/)
+- [Họp rút kinh nghiệm khi kết thúc dự án phát triển game](https://vinacode.net/2015/12/16/kinh-nghiem-lap-trinh-game/)
+- [Thuyết vị lai trong lập trình.. năm 1994](https://vinacode.net/2015/12/06/nghe-lap-trinh-trong-tuong-lai/)
+- [Thay đổi tổ chức của bạn (dành cho những người làm thuê)](https://vinacode.net/2015/11/29/chuyen-nghe-lap-trinh-vien/)
+- [Những nguyên tắc thiết kế cơ bản dành cho lập trình viên](https://vinacode.net/2015/11/18/nguyen-tac-thiet-ke-cho-lap-trinh-vien/)
+- [Tuổi thơ tôi lớn lên cùng máy vi tính](https://vinacode.net/2015/11/11/lich-su-hinh-thanh-may-tinh-va-thung-lung-silicon/)
+- [Đây là điều xảy ra khi bạn để cho các lập trình viên tạo giao diện người dùng](https://vinacode.net/2015/11/04/lap-trinh-vien-tao-giao-dien-nguoi-dung/)
+- [Làm thế nào để lười biếng, dại khờ, và thành công](https://vinacode.net/2015/10/28/tro-thanh-lap-trinh-vien-thanh-cong/)
+- [Ngôn ngữ máy tính không phải là ngôn ngữ của con người](https://vinacode.net/2015/09/30/ngon-ngu-lap-trinh-tot-nhat-2/)
+- [Làm thế nào để không viết một cuốn sách lập trình](https://vinacode.net/2015/09/23/sach-lap-trinh-hay-cho-lap-trinh-vien/)
+- [Bạn đang đọc blog lập trình nguy hiểm nhất thế giới](https://vinacode.net/2015/09/16/blog-lap-trinh-nguy-hiem-nhat-the-gioi/)
+- [Peopleware: Một cuốn sách không thể thiếu cho người làm phần mềm](https://vinacode.net/2015/09/09/sach-hay-cho-lap-trinh-vien-2/)
+- [Phần mềm: Nó là Gas](https://vinacode.net/2015/09/02/phan-mem-la-gas/)
+- [Mort, Elvis, Einstein, và Bạn](https://vinacode.net/2015/08/26/lap-trinh-vien-mort-elvis-einstein-va-ban/)
+- [Liệu bạn có thể thực sự thuê một Coder?](https://vinacode.net/2015/08/19/thue-mot-lap-trinh-vien-gioi/)
+- [Bill Gates và DONKEY.BAS](https://vinacode.net/2015/08/12/bill-gates-va-donkey/)
+- [Vấn đề của trò game dang dở](https://vinacode.net/2015/08/05/tro-game-dang-do/)
+- [Học tập, hay, Học cách làm thế nào để học](https://vinacode.net/2015/07/29/hoc-lap-trinh-nhu-the-nao/)
+- [Lập trình không có comment](https://vinacode.net/2015/07/22/lap-trinh-khong-co-comment/)
+- [Liệu việc có được những lập trình viên giỏi nhất có thực sự quan trọng?](https://vinacode.net/2015/07/15/lap-trinh-vien-gioi-nhat-co-quan-trong/)
+- [Bạn có đang làm theo chỉ dẫn trên thùng sơn?](https://vinacode.net/2015/07/01/lap-trinh-theo-huong-dan/)
+- [Dự luật nhân quyền dành cho lập trình viên](https://vinacode.net/2015/06/24/quyen-loi-lap-trinh-vien/)
+- [Thất bại là mẹ thành công](https://vinacode.net/2015/06/19/lap-trinh-vien-that-bai/)
+- [Lập trình viên cũng là người sử dụng](https://vinacode.net/2015/06/15/lap-trinh-vien-la-nguoi-dung/)
+- [Một dự án mã nguồn mở nên bắt đầu bằng Code](https://vinacode.net/2015/06/12/lap-trinh-ma-nguon-mo/)
+- [Hãy đưa cho tôi những người lười nhất mà tiền có thể mua được](https://vinacode.net/2015/06/10/lap-trinh-vien-luoi-bieng/)
+- [10 Điều răn dành cho lập trình viên tạm gác lại “cái tôi”](https://vinacode.net/2015/06/08/lap-trinh-vien-khong-co-cai-toi/)
+- [Ai cần tài năng khi mà bạn có sự xúc cảm mãnh liệt?](https://vinacode.net/2015/06/05/lap-trinh-vien-tai-nang/)
+- [Đăng nhập bằng bàn phím](https://vinacode.net/2015/06/03/lap-trinh-vien-dung-ban-phim/)
+- [Chúng ta làm ra phần mềm dở ẹc.. với rất nhiều Bug!](https://vinacode.net/2015/06/01/phan-mem-do-nhieu-bug/)
+- [Lập trình phần mềm là một trò game cộng tác](https://vinacode.net/2015/05/29/lap-trinh-phan-mem-la-mot-tro-game/)
+- [Lập trình viên đừng ở trong bóng tối](https://vinacode.net/2015/05/27/lap-trinh-hieu-qua/)
+- [Chứng tự yêu mình của Paul Graham](https://vinacode.net/2015/05/25/lap-trinh-vien-gioi-phai-khoi-nghiep/)
+- [Lập trình game và phân tích game](https://vinacode.net/2015/05/22/lap-trinh-game-va-phan-tich-game/)
+- [Liệu việc viết code có quan trọng?](https://vinacode.net/2015/05/13/lap-trinh-co-quan-trong/)
+- [Trong lập trình: giải pháp tồi hơn đôi khi lại tốt hơn](https://vinacode.net/2015/05/08/giai-phap-lap-trinh/)
+- [Có phải Joel Spolsky đã trở thành một gã cực đoan?](https://vinacode.net/2015/05/06/ngon-ngu-lap-trinh-tu-tao/)
+- [Lập trình viên nói đi đôi với làm](https://vinacode.net/2015/05/01/lap-trinh-vien-hanh-dong/)
+- [Mọi thứ bạn biết sẽ bị lỗi thời trong vòng 5 năm](https://vinacode.net/2015/04/29/kien-thuc-lap-trinh-loi-thoi/)
+- [Lầm tưởng về số năm kinh nghiệm trong nghề lập trình](https://vinacode.net/2015/04/27/kinh-nghiem-lap-trinh/)
+- [Con voi ở trong phòng: Google độc diễn](https://vinacode.net/2015/04/24/google-doc-quyen/)
+- [Liệu kỹ năng viết có quan trọng hơn lập trình?](https://vinacode.net/2015/04/17/ky-nang-lap-trinh-quan-trong/)
+- [Vụ án về việc phân biệt chữ hoa chữ thường](https://vinacode.net/2015/04/15/ngon-ngu-lap-trinh-sai-lam/)
+- [Lạy Chúa, ngài có ở đó không? Có tôi, Microsoft đây](https://vinacode.net/2015/04/13/ton-giao-trong-lap-trinh/)
+- [Cấp độ 5 nghĩa là chẳng bao giờ bạn phải nói câu xin lỗi](https://vinacode.net/2015/04/08/cap-do-lap-trinh-vien/)
+- [Lập trình viên chích chòe](https://vinacode.net/2015/04/06/lap-trinh-vien-chich-choe/)
+- [Con đường sự nghiệp nào cho lập trình viên?](https://vinacode.net/2015/04/03/su-nghiep-lap-trinh-vien/)
+- [Một câu hỏi về đạo đức lập trình](https://vinacode.net/2015/04/01/dao-duc-lap-trinh/)
+- [Phỏng vấn lập trình viên qua điện thoại đúng cách](https://vinacode.net/2015/03/30/tuyen-dung-lap-trinh-vien/)
+- [Portfolio của một lập trình viên](https://vinacode.net/2015/03/27/ho-so-lap-trinh-vien/)
+- [Lập trình viên học trên chiến trường](https://vinacode.net/2015/03/20/lap-trinh-vien-hoc-tap/)
+- [Làm theo chỉ dẫn trên thùng sơn](https://vinacode.net/2015/03/18/lap-trinh-vien-theo-huong-dan/)
+- [Lập trình viên: hãy mài sắc lưỡi cưa của bạn](https://vinacode.net/2015/03/16/lap-trinh-vien-luyen-ky-nang/)
+- [Tất cả các tỉ phú mã nguồn mở ở đâu hết rồi?](https://vinacode.net/2015/03/13/ti-phu-ma-nguon-mo/)
+- [Lập trình viên nên thuộc lòng triết lý KISS và YAGNI](https://vinacode.net/2015/03/11/lap-trinh-vien-can-nho/)
+- [Code tốt nhất là không code chút nào cả](https://vinacode.net/2015/03/09/code-tot-nhat-la-khong-code/)
+- [SEOs: những tay viết nội dung khiêu dâm mới trên Web](https://vinacode.net/2015/03/06/seo-la-gi/)
+- [Kỷ luật là sức mạnh của lập trình viên](https://vinacode.net/2015/03/04/lap-trinh-vien-ky-luat/)
+- [Tất cả các ngôn ngữ lập trình đều như nhau?](https://vinacode.net/2015/03/02/ngon-ngu-lap-trinh-giong-nhau/)
+- [Tại sao tôi lại sử dụng ngôn ngữ Ruby để xây dựng Discourse?](https://vinacode.net/2015/02/27/ngon-ngu-lap-trinh-ruby/)
+- [Alan Turing, cha đẻ của ngành Khoa học Máy tính](https://vinacode.net/2015/02/25/cha-de-khoa-hoc-may-tinh/)
+- [Vấn đề trong ngôi nhà Google](https://vinacode.net/2015/02/23/google-suy-tan/)
+- [Xin chào mừng đến với bộ lạc lập trình viên](https://vinacode.net/2015/02/20/tro-thanh-lap-trinh-vien/)
+- [Kỹ năng lập trình bớt tệ hơn sau mỗi năm](https://vinacode.net/2015/02/18/ky-nang-lap-trinh/)
+- [Những lập trình viên giỏi cần phải đặt mông xuống](https://vinacode.net/2015/02/16/lap-trinh-vien-gioi-can-phai-viet-code/)
+- [Lập trình cặp vs. Code Reviews](https://vinacode.net/2015/02/13/lap-trinh-cap-va-code-review/)
+- [Chúng ta là những người đánh máy trước, lập trình viên thứ nhì](https://vinacode.net/2015/02/11/lap-trinh-vien-danh-may/)
+- [Làm thế nào để trở nên giàu có nhờ lập trình](https://vinacode.net/2015/02/09/lap-trinh-kiem-tien/)
+- [Có một thứ mà mọi kỹ sư phần mềm đều nên biết](https://vinacode.net/2015/02/04/ky-nang-lap-trinh-vien-nen-biet/)
+- [Từ game thủ trở thành nhà phát triển game](https://vinacode.net/2015/02/02/lap-trinh-game-di-dong/)
+- [Tạm gác lại “cái tôi” trong lập trình: Bạn không phải là công việc của bạn](https://vinacode.net/2015/01/30/cai-toi-trong-lap-trinh/)
+- [FizzBuzz: nấc thang lên thiên đường của lập trình viên](https://vinacode.net/2015/01/28/lap-trinh-vien-voi-bai-toan-fizzbuzz/)
+- [Unix đã chết, Unix muôn năm](https://vinacode.net/2015/01/23/lap-trinh-vien-cha-de-he-dieu-hanh-unix/)
+- [Lập trình viên giỏi hãy bớt sử dụng chuột](https://vinacode.net/2015/01/21/lap-trinh-vien-gioi-su-dung-chuot/)
+- [Vì bạn muốn trở thành một lập trình viên](https://vinacode.net/2015/01/19/tro-thanh-mot-lap-trinh-vien/)
+- [Quy tắc đầu tiên trong lập trình: Nó luôn là lỗi của bạn](https://vinacode.net/2015/01/16/trong-lap-trinh-luon-la-loi-cua-ban/)
+- [Lập trình: cũng chỉ là viết](https://vinacode.net/2015/01/14/lap-trinh-cung-la-viet/)
+- [Ai là bạn thân trong lập trình của bạn?](https://vinacode.net/2015/01/12/ban-be-trong-lap-trinh/)
+- [Khi bạn đọc hiểu code chính là lúc bạn đang rewriting code](https://vinacode.net/2015/01/09/lap-trinh-vien-doc-hieu-code/)
+- [Làm thế nào để trở thành một lập trình viên giỏi hơn bằng cách không lập trình](https://vinacode.net/2015/01/05/tro-thanh-lap-trinh-vien-gioi-hon/)
+- [Lập trình viên cũng là con người](https://vinacode.net/2015/01/02/lap-trinh-vien-cung-la-con-nguoi/)
+- [Tách con cừu biết lập trình ra khỏi những con dê không biết lập trình](https://vinacode.net/2014/12/31/biet-lap-trinh-va-khong-biet-lap-trinh/)
+- [Chênh lệch kỹ năng trong lập trình](https://vinacode.net/2014/12/29/ky-nang-trong-lap-trinh/)
+- [Làm thế nào để không trở thành một Rockstar Programmer](https://vinacode.net/2014/12/26/khong-tro-thanh-mot-lap-trinh-vien/)
+- [Có hai kiểu lập trình viên](https://vinacode.net/2014/12/24/co-hai-kieu-lap-trinh-vien/)
+- [Trong lập trình thì số 1 là con số cô đơn nhất](https://vinacode.net/2014/12/22/lap-trinh-vien-co-don/)
+- [Bạn không thích nó ư? Hãy tự lập trình cho nó!](https://vinacode.net/2014/12/17/hay-tu-lap-trinh-san-pham/)
+- [Tự học ASP.NET 2.0 trong 23 giờ](https://vinacode.net/2014/12/15/tu-hoc-lap-trinh-asp-net/)
+- [Từ bỏ Microsoft](https://vinacode.net/2014/12/12/lap-trinh-microsoft/)
+- [Liệu có nên xóa phần code không dùng nữa?](https://vinacode.net/2014/12/10/lap-trinh-vien-toi-uu-code/)
+- [Làm thế nào để thuê một lập trình viên](https://vinacode.net/2014/12/08/thue-mot-lap-trinh-vien/)
+- [Kỹ nghệ phần mềm: Đã chết?](https://vinacode.net/2014/12/05/ky-nghe-phan-mem-da-chet/)
+- [Lập trình thực dụng](https://vinacode.net/2014/12/01/lap-trinh-vien-thuc-dung/)
+- [50 Năm của ngành phát triển phần mềm](https://vinacode.net/2014/11/26/nganh-phat-trien-phan-mem-the-gioi/)
+- [Nếu việc yêu máy tính là sai trái, thì tôi cũng chẳng muốn đúng đắn làm gì](https://vinacode.net/2014/11/24/yeu-thich-lap-trinh/)
+- [Hãy làm tốt công việc của mình](https://vinacode.net/2014/11/21/hay-lam-tot-cong-viec-lap-trinh/)
+- [Máy tính cá nhân đã hết thời](https://vinacode.net/2014/11/19/may-tinh-ca-nhan-da-het-thoi/)
+- [Vấn đề lớn nhất của quản lý dự án là con người](https://vinacode.net/2014/11/17/quan-ly-du-an-phan-mem/)
+- [Lý do tại sao tôi là lập trình viên giỏi nhất thế giới*](https://vinacode.net/2014/11/14/lap-trinh-vien-gioi-nhat-the-gioi/)
+- [Liệu các ứng dụng di động sẽ giết chết các website?](https://vinacode.net/2014/11/12/ung-dung-di-dong-thay-the-website/)
+- [Lập trình viên Mỹ xấu xí](https://vinacode.net/2014/11/10/lap-trinh-vien-my-xau-xi/)
+- [Hình thức thảo luận qua diễn đàn đã hết thời?](https://vinacode.net/2014/11/07/hinh-thuc-thao-luan-lap-trinh-qua-dien-dan/)
+- [Nhiều lập trình viên không chịu đọc sách — nhưng bạn đừng giống họ](https://vinacode.net/2014/11/03/lap-trinh-vien-khong-chiu-doc-sach/)
+- [Lập trình viên không biết lập trình](https://vinacode.net/2014/10/27/lap-trinh-vien-khong-biet-lap-trinh/)
+- [Tình dục, nói dối và phát triển phần mềm](https://vinacode.net/2014/10/20/tinh-duc-va-phat-trien-phan-mem/)
+- [Làm thế nào để khích lệ các lập trình viên](https://vinacode.net/2014/10/15/khich-le-lap-trinh-vien/)
+- [PHP là ngôn ngữ lập trình được thiết kế rất tồi](https://vinacode.net/2014/10/10/php-ngon-ngu-lap-trinh-thiet-ke-rat-toi/)
+- [16 Cuốn sách “kinh điển” mà tất cả lập trình viên đều nên đọc](https://vinacode.net/2014/09/29/sach-hay-cho-lap-trinh-vien/)
+- [8 Cấp độ của nghề lập trình viên](https://vinacode.net/2014/09/26/dang-cap-cua-lap-trinh-vien/)
+- [Tại sao nhiều lập trình viên lại không biết… code](https://vinacode.net/2014/08/18/lap-trinh-vien-khong-biet-code/)
+- [Hãy chấm dứt việc ra đi đột ngột](https://vinacode.net/2014/08/01/lap-trinh-vien-bi-benh-tram-cam/)
+- [Tất cả lập trình đều là lập trình web](https://vinacode.net/2014/07/04/tat-ca-lap-trinh-la-lap-trinh-web/)
+- [Làm ơn đừng học lập trình](https://vinacode.net/2014/06/02/dung-hoc-lap-trinh/)
+- [Nghề lập trình phần mềm: Yêu thích nó hay Từ bỏ nó?](https://vinacode.net/2013/12/11/nghe-lap-trinh-phan-mem/)
+- [Đừng hoang tưởng về thành công chỉ sau một đêm, bạn sẽ phải cần nhiều năm!](https://vinacode.net/2013/04/19/thanh-cong-nhanh/)
