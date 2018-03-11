@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer');
-process.setMaxListeners(Infinity); 
 
 async function createAPage(browser) {
     const page = await browser.newPage();
@@ -8,9 +7,9 @@ async function createAPage(browser) {
 }
 
 
-async function parseCodinghorror() {
+function parseCodinghorror() {
     const articleList = Array.from(document.getElementsByTagName('article'));
-    return await articleList.map(article => {
+    return articleList.map(article => {
         const titleElement = article.querySelector('h1.entry-title > a');
         const referenceElement = article.querySelector('div.entry-content a');
         return { title: titleElement.text, vncodeHref: titleElement.href, referLink: referenceElement.href }
@@ -42,3 +41,4 @@ async function codinghorror() {
     .catch(err => console.log("erraaasas",err))
  
 //TODO: write to ../README.md
+//TODO: crawl plain html, ignore loading image, css, script, etc.
