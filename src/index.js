@@ -3,11 +3,11 @@ const fs = require('fs');
 let globalResult = 'Links to be added below\n';  // contains links of all pages
 let globalCount = 0;    // keeps counting links which are collected
 
-async function crawlCodingHorror() {
+async function crawlCodingHorror(callback) {
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
     
-    for (let pageNo = 1; pageNo < 3; pageNo++) {
+    for (let pageNo = 1; pageNo < 21; pageNo++) {
         let pageURL = (pageNo === 1 ) ? '' : `page/${pageNo}`; //
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
         await page.goto(`https://vinacode.net/${pageURL}`, {
@@ -45,12 +45,15 @@ async function crawlCodingHorror() {
         globalResult = globalResult.concat(localResult.articles);
         globalCount = localResult.currentCount;
 
+        callback(globalResult, 'data.txt')
+
     }
 
     await browser.close();
 };
 
-crawlCodingHorror(function() {
-    fs.writeFileSync('data.txt', globalResult);
-});
+function writeResultToFile(source, target) {
+    fs.writeFileSync(target, source);
+}
 
+crawlCodingHorror(writeResultToFile);
