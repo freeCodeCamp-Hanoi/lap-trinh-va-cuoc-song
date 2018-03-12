@@ -1,46 +1,56 @@
 const puppeteer = require('puppeteer');
+const fs = require('fs');
+let globalResult = 'Links to be added below\n';  // contains links of all pages
+let globalCount = 0;    // keeps counting links which are collected
 
-async function codinghorror() {
+async function crawlCodingHorror() {
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
-    var count = 0;
-    let result = [];
-    for (let pageNo = 1; pageNo < 4; pageNo++) {
-        let pageNumber = (pageNo === 1 ) ? '' : pageNo
-        await page.goto(`https://vinacode.net/page/${pageNumber}`, {
-            waitUntil: 'networkidle2',
-            timeout: 80000
+    
+    for (let pageNo = 1; pageNo < 3; pageNo++) {
+        let pageURL = (pageNo === 1 ) ? '' : `page/${pageNo}`; //
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
+        await page.goto(`https://vinacode.net/${pageURL}`, {
+            waitUntil: 'load',
+            timeout: 90000
         });
 
-        const articles = await page.evaluate(() => {
-            let articleList = document.getElementsByTagName('article');
-            let articles = [];
-            for (let i = 0; i < articleList.length; i++) {
-                count++;
-                let titleElement = articleList[i].querySelector('h1.entry-title > a');
-                let referenceElement = articleList[i].querySelector('div.entry-content a');
-                referenceLink = referenceElement.href;
-                const isBlogCodingHorror = referenceLink.indexOf('codinghorror') >= 0;
-                if (isBlogCodingHorror) {
-                    const post = `${count}. [${titleElement.text}](${titleElement.href})`;
-                    articles.push(post);
-                }
+        const localResult = await page.evaluate(({globalCount}) => {
+            // collects links of one page
+            const ARTICLE_SELECTOR      = 'article'; // to select one title
+            const TITLE_SELECTOR        = 'h1.entry-title > a'; // to select title and link of title
+            const REF_SELECTOR          = 'div.entry-content a'; // to select reference of title
+            const CONDITION_SELECTOR    = 'codinghorror'; // keyword to select title
+            
+            let currentCount = globalCount; 
+            let articleList = document.getElementsByTagName(ARTICLE_SELECTOR);
+            let articles = '';
 
+            for (let i = 0; i < articleList.length; i++) {
+                let titleElement = articleList[i].querySelector(TITLE_SELECTOR);
+                let referenceElement = articleList[i].querySelector(REF_SELECTOR );
+                referenceLink = referenceElement.href;
+                const isBlogCodingHorror = referenceLink.indexOf(CONDITION_SELECTOR) >= 0;
+                if (isBlogCodingHorror) {
+                    currentCount++;
+                    const post = `${currentCount}. [${titleElement.text}](${titleElement.href})\n`;
+                    articles = articles + post;
+                }
             }
 
-            result = result.concat(articles);
+            return {articles, currentCount};
 
-            return articles;
+        }, {globalCount})
 
-        })
-
-        // console.log(articles);
+        globalResult = globalResult.concat(localResult.articles);
+        globalCount = localResult.currentCount;
 
     }
-
-    console.log(result);
 
     await browser.close();
 };
 
-codinghorror();
+crawlCodingHorror(function() {
+    fs.writeFileSync('data.txt', globalResult);
+});
+
